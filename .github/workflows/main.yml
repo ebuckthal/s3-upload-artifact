@@ -1,0 +1,21 @@
+on: [push]
+
+env:
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to say hello
+    steps:
+      # To use this repository's private action, you must check out the repository
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Test 
+        uses: ./ # Uses an action in the root directory
+        id: test 
+        with:
+          bucket: 'sh-sysops'
+          key: 'test2'
+          path: './README.md'
