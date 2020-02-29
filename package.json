@@ -1,0 +1,23 @@
+{
+  "name": "s3-upload-artifact",
+  "version": "1.0.0",
+  "description": "Mirrors actions/upload-artifact but for s3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ebuckthal/s3-upload-artifact.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ebuckthal/s3-upload-artifact/issues"
+  },
+  "homepage": "https://github.com/ebuckthal/s3-upload-artifact#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.2"
+  }
+}

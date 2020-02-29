@@ -1,0 +1,13 @@
+name: 'Upload a Build Artifact via S3'
+description: 'Upload a build artifact to S3 that can be used by subsequent workflow steps'
+author: 'ebuckthal'
+inputs: 
+  name:
+    description: 'Artifact name'
+    required: true
+  path:
+    description: 'Directory containing files to upload'
+    required: true
+runs:
+  using: 'node12'
+  main: 'index.js'
