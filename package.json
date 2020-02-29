@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/ebuckthal/s3-upload-artifact#readme",
   "dependencies": {
-    "@actions/core": "^1.2.2"
+    "@actions/core": "^1.2.2",
+    "aws-sdk": "^2.630.0"
+  },
+  "devDependencies": {
+    "prettier": "^1.19.1"
   }
 }
