@@ -9,8 +9,6 @@ try {
   const inputPath = core.getInput('path');
   const inputKey = core.getInput('key');
 
-  core.info(github.context.payload.repository.full_name);
-
   const key = path.join(
     github.context.payload.repository.full_name,
     github.context.sha,
