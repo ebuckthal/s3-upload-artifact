@@ -13,8 +13,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Test 
-        #uses: ./ # Uses an action in the root directory
-        uses: ebuckthal/s3-upload-artifact@v3
+        uses: ./ # Uses an action in the root directory
+        #uses: ebuckthal/s3-upload-artifact@v3
 
         id: test 
         with:

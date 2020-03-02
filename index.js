@@ -1,6 +1,7 @@
 const core = require('@actions/core');
 const fs = require('fs');
 const AWS = require('aws-sdk');
+const github = require('@actions/github');
 
 AWS.config.update({ region: 'us-east-1' });
 
@@ -10,6 +11,8 @@ try {
   const inputKey = core.getInput('key');
 
   const stream = fs.createReadStream(inputPath);
+
+  core.info(github.context);
 
   s3 = new AWS.S3({ apiVersion: '2006-03-01' });
   s3.upload({ Bucket: inputBucket, Key: inputKey, Body: stream }, function(
