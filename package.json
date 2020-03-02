@@ -4,7 +4,8 @@
   "description": "Mirrors actions/upload-artifact but for s3",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package": "ncc build index.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
     "aws-sdk": "^2.630.0"
   },
   "devDependencies": {
+    "@zeit/ncc": "^0.21.1",
     "prettier": "^1.19.1"
   }
 }
