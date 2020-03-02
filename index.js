@@ -12,7 +12,7 @@ try {
 
   const stream = fs.createReadStream(inputPath);
 
-  core.info(github.context);
+  core.info(JSON.stringify(github.context, null, 2));
 
   s3 = new AWS.S3({ apiVersion: '2006-03-01' });
   s3.upload({ Bucket: inputBucket, Key: inputKey, Body: stream }, function(
