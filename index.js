@@ -8,7 +8,11 @@ try {
   const inputBucket = core.getInput('bucket');
   const inputPath = core.getInput('path');
   const inputKey = core.getInput('key');
-  const key = path.join(github.context.sha, inputKey);
+  const key = path.join(
+    github.context.repository,
+    github.context.sha,
+    inputKey,
+  );
 
   const stream = fs.createReadStream(inputPath);
 
