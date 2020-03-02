@@ -5,9 +5,9 @@ env:
   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
 
 jobs:
-  hello_world_job:
+  test_upload:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: Test S3 upload
     steps:
       # To use this repository's private action, you must check out the repository
       - name: Checkout
@@ -15,7 +15,6 @@ jobs:
       - name: Test 
         uses: ./ # Uses an action in the root directory
         #uses: ebuckthal/s3-upload-artifact@v3
-
         id: test 
         with:
           bucket: 'sh-sysops'
