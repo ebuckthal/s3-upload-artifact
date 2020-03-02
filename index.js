@@ -10,7 +10,7 @@ try {
   const inputBucket = core.getInput('bucket');
   const inputPath = core.getInput('path');
   const inputKey = core.getInput('key');
-  const key = path.join([github.ref, inputKey]);
+  const key = path.join(github.ref, inputKey);
 
   const stream = fs.createReadStream(inputPath);
 
