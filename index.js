@@ -8,6 +8,9 @@ try {
   const inputBucket = core.getInput('bucket');
   const inputPath = core.getInput('path');
   const inputKey = core.getInput('key');
+
+  core.info(JSON.stringify(github.context, null, 2));
+
   const key = path.join(
     github.context.repository,
     github.context.sha,
